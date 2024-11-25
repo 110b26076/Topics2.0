@@ -1,0 +1,137 @@
+/* 整體樣式 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* 導覽列 */
+#navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999; /* 保證導航列在最上層 */
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-title {
+  font-size: 18px;
+}
+
+.hamburger-menu {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* 用戶圖標樣式 */
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden; /* 確保圖片限制在圓形內 */
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.user-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保圖片不變形 */
+}
+
+/* 菜單隱藏樣式 */
+.hidden {
+  display: none;
+}
+
+/* 用戶選單 */
+.user-menu {
+  position: absolute;
+  top: 50px; /* 與頭像位置對齊 */
+  right: 20px; /* 從右邊距離多留一點空間 */
+  top: 50px; /* 確保菜單從頭像下方彈出 */  
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 150px;
+}
+
+.user-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-menu li:last-child {
+  border-bottom: none;
+}
+
+.user-menu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.user-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* 右下角按鈕 */
+#info-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #f6b52a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#info-button:hover {
+  background-color: #e5a01e;
+}
+
+/* 手勢訊息 */
+.hidden {
+  display: none;
+}
+
+#videoContainer {
+  text-align: center;
+}
+
+#gestureCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

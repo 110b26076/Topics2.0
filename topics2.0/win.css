@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+  }
+
+  .carousel {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      overflow: hidden; /* 確保超出容器的部分不會顯示 */
+      border-radius: 10px;
+      padding-bottom: 50px;
+  }
+
+  .modal-content {
+    position: relative;
+    overflow: visible; /* 避免遮擋按鈕 */
+  }
+
+  .slides {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    width: 100%;
+    position: relative;
+    display: flex; /* 讓圖片在 slide 裡使用 flex */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+  }
+  
+  .slide img {
+    width: 100%; /* 圖片的寬度會跟隨容器 */
+    display: block;
+    object-fit: contain; /* 保證圖片比例不變，並填滿容器 */
+  }
+  
+  .trailer-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f6b52a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .trailer-btn:hover {
+    background-color: #e5a01e;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  .close-btn:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+  }
+
+  .indicators {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .indicator.active {
+    background-color: #f6b52a;
+  }
+
+  /* 左右切換按鈕的樣式 */
+  .prev-next-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 3000;
+    display: flex;
+    justify-content: space-between;
+}
+
+  .prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    z-index: 101;
+  }
+
+  .indicators, .slides {
+    pointer-events: none; /* 避免這些部分透明背景干擾 */
+  }
+  
